@@ -5,7 +5,7 @@ int esprimo;
 
 int main(){
 
-    printf("Bienvenido a la calculadora de numeros primos\n");
+    printf("Bienvenido a la calculadora de numeros primos.\n");
 
     do
     {
@@ -19,10 +19,15 @@ int main(){
                 if (numero%1==0)
                 {
                     esprimo=0;
-                }
-                
-            }
-            
+                } 
+            }  
+        }
+        if (esprimo)
+        {
+            printf("El numero %d si es un numero primo.\n", numero);
+        } else 
+        {
+            printf ("El numero %d NO es un numero primo.\n", numero);
         }
         
     } while (numero>0);
