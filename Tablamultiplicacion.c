@@ -8,8 +8,13 @@ int main(){
     printf("Bienvenido a la calculadora de tablas de multiplicacion.\n");
     while (numero<1 || numero>10)
     {
-        printf("Por favor, inserta un numero entre 1-10 para determinar su respectiva tabla de multiplicacion\n");
+        printf("Inserta un entero entre 1-10 para determinar su respectiva tabla de multiplicacion\n");
         scanf("%d", &numero);  
+        if (numero<0 || numero>10)
+        {
+            printf("El numero insertado no esta dentro del rango de 1-10. Vuele a intentarlo.\n");
+        }  
+        
     }
     
     printf("La tabla de %d es:\n", numero);
@@ -18,6 +23,7 @@ int main(){
         producto=numero*i;
         printf("%d x %d = %d\n", numero, i, producto);
     }
+
     
     return 0;
 }
