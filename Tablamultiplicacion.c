@@ -3,27 +3,48 @@
 
 int numero;
 int producto;
+int opcion;
 
-int main(){
-    printf("Bienvenido a la calculadora de tablas de multiplicacion.\n");
-    while (numero<1 || numero>10)
-    {
-        printf("Inserta un entero entre 1-10 para determinar su respectiva tabla de multiplicacion\n");
-        scanf("%d", &numero);  
-        if (numero<0 || numero>10)
+int main() {
+    do {
+        printf("Bienvenido a la calculadora de tablas de multiplicacion.\n");
+        opcion = 1;
+
+        do {
+            printf("Inserta un entero entre 1-10 para determinar su respectiva tabla de multiplicacion\n");
+            scanf("%d", &numero);
+            if (numero < 1 || numero > 10) {
+                printf("El numero insertado no esta dentro del rango de 1-10. Vuelve a intentarlo.\n");
+            }
+        } while (numero < 1 || numero > 10);
+
+        printf("La tabla del %d es:\n", numero);
+        for (int i = 1; i <= 10; i++) {
+            producto = numero * i;
+            printf("%d x %d = %d\n", numero, i, producto);
+        }
+
+        do
         {
-            printf("El numero insertado no esta dentro del rango de 1-10. Vuele a intentarlo.\n");
-        }  
-        
-    }
-    
-    printf("La tabla de %d es:\n", numero);
-    for (int i = 1; i <= 10; i++)
-    {
-        producto=numero*i;
-        printf("%d x %d = %d\n", numero, i, producto);
-    }
+            printf("||---------------------------------------------||\n");
+            printf("Deseas calcular otra tabla de multiplicar?\n");
+            printf("1. Si, por favor.\n");
+            printf("0. No, es suficiente.\n");
+            printf("||---------------------------------------------||\n");
+            scanf("%d", &opcion);
+            if (opcion!=0 && opcion!= 1)
+            {
+                printf("Opcion no valida. Por favor, inserta una opcion valida.\n");
+            }
+            
 
-    
+        } while (opcion !=0 && opcion !=1);
+        
+
+        if (opcion == 0) {
+            printf("Gracias por utilizar el algoritmo. Nos vemos!\n");
+        }
+    } while (opcion == 1);
+
     return 0;
 }
