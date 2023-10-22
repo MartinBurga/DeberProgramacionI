@@ -20,6 +20,8 @@ int main(){
                 printf("|--------------------------------------------|\n");
             }
             
+            // Se pone un controlador que regula que el numero entero sea un positivo //
+
         } while (numero<0);
 
         if (numero==0)
@@ -31,7 +33,12 @@ int main(){
             printf("El numero 1 NO es un numero primo.\n");
             printf("|--------------------------------------------|\n");
         }
-        
+
+        // Como opción de salida finalgoritmo se le ofrece al usuario presionar 0 para salir.
+
+        // Controlador de numero primo: Si el usuario inserta el numero 1, automaticamente se lanza
+        // el mensaje de que es un numero no primo.
+
         if (numero>1)
         {
             esprimo=1;
@@ -53,6 +60,9 @@ int main(){
             printf("|--------------------------------------------|\n");
             }
         }
+
+        // Se determina si el numero insertado es un numero primo o no con el operador mod (%).
+        // Finalmente se imprime la respuesta.
   
     } while (numero>0);
 
