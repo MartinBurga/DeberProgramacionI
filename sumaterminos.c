@@ -10,6 +10,16 @@ int main(){
     {
         printf("Por favor, inserta un numero entero.\n");
         scanf("%d", &numero);
+        if (numero>0)
+        {
+            while (numero>=0)
+            {
+                respuesta=respuesta+numero;
+                numero--;
+            }
+            printf("%d", respuesta);
+            
+        }
 
     } while (numero>0);
     
