@@ -26,9 +26,18 @@ int main(){
             suma=suma+factorial;
             numfactorial++;
         }
+        // Se declara y se inicializa dos variables: i & a. Una se encargara de contar el numero de factoriales
+        // que tenga el numero insertado mientras que la otra sera el multiplicador que ira multiplicando al numero
+        // Ambas iran sumandose 1 a la vez. Para al final irse sumandose los factoriales.
+
         promedio=suma/numfactorial;
         printf("El promedio de factoriales del numero insertado es de: %d\n", promedio);
         printf("||-------------------------------------------------------||\n");
+
+        // A base del contador previamente añadido y la suma del producto de los factoriales es que se determina
+        // el promedio de los factoriales con la simple division de la suma de los factoriales sobre el numero de 
+        // factoriales existentes. 
+
         do
         {
             printf("Deseas calcular el promedio de factoriales de otro numero?\n");
@@ -46,6 +55,9 @@ int main(){
             printf("Gracias por utilizar el algoritmo\n");
             break;
         }
+        
+        // Pequeño menu que ofrece al usuario la capacidad de volver a insertar un numero y nuevamente determinar
+        // el promedio de dichos factoriales. 
         
     } while (opcion == 1);
 
