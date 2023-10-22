@@ -45,6 +45,26 @@ int main(){
         // el usuario. Se le divide para 10 para una vez que se haya comprobado si es primo o no, pase al siguiente
         // termino del numero entero. 
 
+        if (contador1>contador2)
+        {
+            printf("El primer numero entero insertado es el numero con mas numeros primos en sus digitos.\n");
+        } else if (contador1<contador2)
+        {
+            printf("El segundo numero entero insertado es el numero con mas numeros primos en sus digitos.\n");
+        } else {
+            printf("Ambos numeros insertados tienen la misma cantidad de numeros primos.\n");
+        }
+        
+        printf("Deseas volver a digitar otros numeros y compararlos?\n");
+        printf("1. Si\n");
+        printf("2. No\n");
+        scanf("%d", &opcion);
+        if (opcion==2)
+        {
+            printf("Gracias por utilizar el algoritmo. Ten un buen dia:)");
+        }
+        
+
     } while (opcion==1);
     
     
