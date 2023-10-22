@@ -16,6 +16,9 @@ int main() {
             if (numero < 1 || numero > 10) {
                 printf("El numero insertado no esta dentro del rango de 1-10. Vuelve a intentarlo.\n");
             }
+            //Controlador ante un posible ingreso de numeros mayores a 10 o menores a 1. Este se repetirá
+            // Hasta que el usuario inserte un valor dentro del rango preestablecido.
+
         } while (numero < 1 || numero > 10);
 
         printf("La tabla del %d es:\n", numero);
@@ -23,6 +26,9 @@ int main() {
             producto = numero * i;
             printf("%d x %d = %d\n", numero, i, producto);
         }
+        //Se imprimirá la tabla del numero. El proceso es basicamente que se imprime siempre el numero insertado
+        // pero existe una variable "i" que ira aumentando cada vez que se haga una multiplicación. Esta actuará
+        // de multiplicador hasta llegar al valor de menor igual a 10.
 
         do
         {
@@ -37,6 +43,8 @@ int main() {
                 printf("Opcion no valida. Por favor, inserta una opcion valida.\n");
             }
             
+            //Finalmente se le ofrece al usuario la capacidad de volver a calcular las tablas pero de otro numero.
+            // En este, existe un controlador de respuesta que evita una respuesta que no sea 0 o 1.
 
         } while (opcion !=0 && opcion !=1);
         
