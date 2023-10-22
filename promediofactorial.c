@@ -23,10 +23,13 @@ int main(){
                 suma=suma+factorial;
                 numfactorial++;
             }
-            
+            suma=suma+factorial;
+            numfactorial++;
             
         }
-        
+
+        promedio=suma/numfactorial;
+        printf("El promedio de factoriales del numero insertado es de: %d\n", promedio);
 
     } while (numero<=0);
     
