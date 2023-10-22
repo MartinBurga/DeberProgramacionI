@@ -64,9 +64,7 @@ int main(){
             printf("Gracias por utilizar el algoritmo. Ten un buen dia:)");
         }
         
-
     } while (opcion==1);
-    
     
     return 0;
 }
